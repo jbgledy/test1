@@ -1,0 +1,15 @@
+= test1.erl
+
+
+[source,erlang]
+ -------------------------------------------
+ ./include::test1.erl[]
+ -------------------------------------------
+
+
+[red]#Obvious# and [big red yellow-background]*very obvious*.
+
+#Obvious# and *very obvious*.
+
+
+
