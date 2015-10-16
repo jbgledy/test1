@@ -2,18 +2,37 @@
 
 
 [source,erlang]
- -------------------------------------------
--module(test1).
+-------------------------------------------
+-module(test1).      % <1> 
 
--export([start/0]).
+-export([start/0]).   % <2>
 
-start() -> io:format("Hello World~n").
+start() -> io:format("Hello World~n").   % <3>
 -------------------------------------------
 
+Notiation Details 
+
+<1> Module Name
+<2> Export things
+<3> Satrt
+
+[horizontal]
+*(1)*:: Module Name
+*(2)*:: Export
 
 [red]#Obvious# and [big red yellow-background]*very obvious*.
 
 #Obvious# and *very obvious*.
 
+
+
+[bibliography]
+.Optional list title
+- [[[taoup]]] Eric Steven Raymond. 'The Art of UNIX
+  Programming'. Addison-Wesley. ISBN 0-13-142901-9.
+- [[[walsh-muellner]]] Norman Walsh & Leonard Muellner.
+  'DocBook - The Definitive Guide'. O'Reilly & Associates, 1999. ISBN 1-56592-580-7.
+  
+  
 
 
