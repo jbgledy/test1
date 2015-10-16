@@ -3,8 +3,12 @@
 
 [source,erlang]
  -------------------------------------------
- \include::test1.erl
- -------------------------------------------
+-module(test1).
+
+-export([start/0]).
+
+start() -> io:format("Hello World~n").
+-------------------------------------------
 
 
 [red]#Obvious# and [big red yellow-background]*very obvious*.
