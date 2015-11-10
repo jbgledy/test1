@@ -82,6 +82,55 @@ _NOTE: Requires WSC_ +
 |9 2+>|10
 |================
 
+new one
+
+|================
+|1|2
+|hi|
+
+[cols="1,1,1"]
+!============
+! a ! b ! c
+! d ! e ! f
+!============
+
+|3 |4
+|================
+
+
+More
+
+
+[width="75%",cols="1,2a"]
+|==============================================
+|Normal cell
+
+|Cell with nested table
+
+[cols="2,1"]
+!==============================================
+!Nested table cell 1 !Nested table cell 2
+!==============================================
+
+|==============================================
+
+
+Another 
+
+.An example table
+[width="50%",cols=">s,^m,e",frame="topbot",options="header,footer"]
+|==========================
+|      2+|Columns 2 and 3
+|1       |Item 1  |Item 1
+|2       |Item 2  |Item 2
+|3       |Item 3  |Item 3
+|4       |Item 4  |Item 4
+|footer 1|footer 2|footer 3
+|==========================
+
+
+
+
 == Call API
 
 JSON Helper +++<u>+++http://www.jsoneditoronline.org/+++</u>+++ 
