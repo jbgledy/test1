@@ -1,0 +1,136 @@
+= WebRTC APIs
+= Application and Admin (Model) API
+
+
+
+Application Model APIs
+WebSocket Connection (“wsc”)
+Call (“call”)
+Chat (“chat”)
+Conference (“conf”)
+Admin Model APIs
+Call (“call”)
+Chat (“chat”)
+Conference (“conf”)
+register
+onRegister
+
+
+
+
+== Application Model APIs
+
+
+=== WebSocket Connection (“wsc”)
+
+→ connect ++ *Auth/Register* +
+← onopen(evt) - WS Opened +
+← onclose(evt) - WS Closed +
+    -- Flag to retry +
+← onmessage(evt) +
+← onerror(evt) +
+→ doSend(message) +
+→ doLogToServer(message)
+
+
+
+=== Call (“call”)
+
+_NOTE: Requires WSC_ +
+→ call +
+    ← onCallAnswer +
+    ← onCallBusy +
+    ← onCallFailure +
+← onCall(evt) +
+→ callSendDtmf +
+← onCallDtmf +
+→ callHangup +
+← onCallHangup +
+→ callHangupComplete
+
+
+=== Chat (“chat”)
+
+_NOTE: Requires WSC_ +
+→ chatJoin +
+    ← onChatJoin +
+    ← onChatFailure +
+→ chatLeave +
+    ← onChatLeft +
+→ chatSendMessage +
+← onChatGetMessage +
+→ chatUpdate +
+    ← onChatUpdate +
+← onChatActivity 
+
+=== Conference (“conf”)
+
+_NOTE: Requires WSC_ +
+*For all Conf Participants * +
+→ confJoin +
+    ← onConfWaiting +
+    ← onConfJoined +
+    ← onConfFailure +
+→ confLeave +
+    ← onConfLeft +
+→ confSendDtmf  +
+    ← onConfSendDtmfRecieved +
+→ confSendCommand +
+    ← onConfSendCommandRecieved  +
+← onConfParticipantsChanged +
+← onConfFloorDetails
+
+*For Conf Admin* +
+→ confCreate +
+    ← onConfCreated +
+→ confDelete +
+    ← onConfDeleted +
+→ confParticipantDelete +
+    ← onConfParticipantDeleted +
+→ confParticipantAdd +
+    ← onConfParticipantAdded
+
+== Admin Model APIs
+
+
+
+=== Call (“call”)
+
+
+
+=== Chat (“chat”)
+
+
+
+=== Conference (“conf”)
+
+
+
+
+ * Function Name
+ ** JS Parameters
+ ** JSON Sent to Erlang
+ * Callback(s)
+ ** JSON from Erlang
+ ** Parameters sent to Callback
+
+
+== Call API
+
+JSON Helper +++<u>+++http://www.jsoneditoronline.org/+++</u>+++ 
+
+
+
+
+|===
+|=== register|
+
+||*Parameter*
+||JSON Sent to Server
+|*Callback(s)*|
+||==== onRegister
+||
+||
+|===
+
+
