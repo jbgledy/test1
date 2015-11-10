@@ -63,47 +63,6 @@ _NOTE: Requires WSC_ +
     ← onChatUpdate +
 ← onChatActivity 
 
-=== Conference (“conf”)
-
-_NOTE: Requires WSC_ +
-*For all Conf Participants * +
-→ confJoin +
-    ← onConfWaiting +
-    ← onConfJoined +
-    ← onConfFailure +
-→ confLeave +
-    ← onConfLeft +
-→ confSendDtmf  +
-    ← onConfSendDtmfRecieved +
-→ confSendCommand +
-    ← onConfSendCommandRecieved  +
-← onConfParticipantsChanged +
-← onConfFloorDetails
-
-*For Conf Admin* +
-→ confCreate +
-    ← onConfCreated +
-→ confDelete +
-    ← onConfDeleted +
-→ confParticipantDelete +
-    ← onConfParticipantDeleted +
-→ confParticipantAdd +
-    ← onConfParticipantAdded
-
-== Admin Model APIs
-
-
-
-=== Call (“call”)
-
-
-
-=== Chat (“chat”)
-
-
-
-=== Conference (“conf”)
-
 
 
 
@@ -114,16 +73,23 @@ _NOTE: Requires WSC_ +
  ** JSON from Erlang
  ** Parameters sent to Callback
 
+.Spans, alignments and styles
+[cols="e,m,^,>s",width="25%"]
+|================
+|1 >s|2 |3 |4
+^|5 2.2+^.^|6 .3+<.>m|7
+^|8
+|9 2+>|10
+|================
 
 == Call API
 
 JSON Helper +++<u>+++http://www.jsoneditoronline.org/+++</u>+++ 
 
 
+== register
 
-
-|===
-|=== register|
+|register| |
 
 ||*Parameter*
 ||JSON Sent to Server
